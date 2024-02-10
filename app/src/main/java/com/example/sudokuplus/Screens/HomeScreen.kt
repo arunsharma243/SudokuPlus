@@ -1,4 +1,4 @@
-package com.example.sudokuplus.Screens
+package com.example.sudokuplus.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -22,12 +22,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+import com.example.sudokuplus.ScreenHolder
 import com.example.sudokuplus.ui.theme.BlueCustom
 
-@Preview
 @Composable
-fun HomeScreen() {
-
+fun HomeScreen(navController: NavController) {
     Column(modifier= Modifier
         .fillMaxSize()
         .background(Color.White),
@@ -42,7 +43,7 @@ fun HomeScreen() {
             contentAlignment = Alignment.Center
         ) {
             Text(
-                text = "SUDOKU",
+                text = "SUDOKU\r\nPLUS",
                 fontSize = 50.sp,
                 fontFamily = FontFamily.Cursive,
                 fontWeight = FontWeight.Bold,
@@ -56,7 +57,9 @@ fun HomeScreen() {
             .fillMaxWidth()
             .fillMaxHeight(0.8f)){
             Button(
-                onClick = { /*TODO*/ },
+                onClick = {
+                          navController.navigate(route=ScreenHolder.Dummy1.route)
+                },
                 modifier = Modifier
                     .padding(15.dp)
                     .fillMaxWidth()
@@ -70,14 +73,15 @@ fun HomeScreen() {
 
             ) {
                 Text(
-                    text = "Play a Game",
+                    text = "New Game",
                     modifier = Modifier,
                     style = MaterialTheme.typography.titleLarge,
-
                     )
             }
             Button(
-                onClick = { /*TODO*/ },
+                onClick = {
+                        navController.navigate(route=ScreenHolder.Dummy2.route)
+                },
                 modifier = Modifier
                     .padding(15.dp)
                     .fillMaxWidth()
@@ -90,11 +94,18 @@ fun HomeScreen() {
                 )
             ) {
                 Text(
-                    text = "Solve a Sudoku",
+                    text = "Get your Sudoku solved",
                     style = MaterialTheme.typography.titleLarge
-
                 )
             }
         }
     }
+}
+
+
+@Composable
+@Preview(showBackground = true)
+fun HomeScreenPreview() 
+{
+    HomeScreen(navController = rememberNavController())
 }
