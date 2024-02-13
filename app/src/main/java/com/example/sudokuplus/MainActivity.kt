@@ -10,13 +10,13 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 
 class MainActivity : ComponentActivity() {
-   // lateinit var navController: NavHostController
+    lateinit var navController: NavHostController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-//            installSplashScreen()
-//            navController = rememberNavController()
-//            SetupNavGraph(navController = navController)
+            installSplashScreen()
+            navController = rememberNavController()
+            SetupNavGraph(navController = navController)
             GameScreen()
         }
     }
