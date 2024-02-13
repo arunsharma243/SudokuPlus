@@ -8,6 +8,7 @@ import androidx.activity.compose.setContent
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.example.sudokuplus.screens.HomeScreen
 
 class MainActivity : ComponentActivity() {
     lateinit var navController: NavHostController
@@ -17,7 +18,6 @@ class MainActivity : ComponentActivity() {
             installSplashScreen()
             navController = rememberNavController()
             SetupNavGraph(navController = navController)
-            GameScreen()
         }
     }
 }
