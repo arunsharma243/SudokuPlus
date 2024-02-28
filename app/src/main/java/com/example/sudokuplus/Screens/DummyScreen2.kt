@@ -1,5 +1,5 @@
 //Use this for the second button
-package com.example.sudokuplus.screens
+package com.example.sudokuplus.Screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

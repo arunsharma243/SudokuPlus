@@ -3,7 +3,7 @@
     <style name="Theme.SplashScreen.Logo" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">#8DCDCD</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/app_image</item>
-        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <item name="windowSplashScreenAnimationDuration">5000</item>
         <item name="postSplashScreenTheme">@style/Theme.SudokuPlus</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>

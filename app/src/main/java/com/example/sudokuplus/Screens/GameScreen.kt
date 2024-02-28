@@ -1,3 +1,6 @@
+package com.example.sudokuplus.Screens
+import BoardBase
+import Timer
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

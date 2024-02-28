@@ -4,9 +4,9 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.sudokuplus.screens.DummyScreen1
-import com.example.sudokuplus.screens.DummyScreen2
-import com.example.sudokuplus.screens.HomeScreen
+import com.example.sudokuplus.Screens.DummyScreen2
+import com.example.sudokuplus.Screens.HomeScreen
+import com.example.sudokuplus.Screens.GameScreen
 
 @Composable
 fun SetupNavGraph(
@@ -20,9 +20,9 @@ fun SetupNavGraph(
         {
             HomeScreen(navController=navController)
         }
-        composable(ScreenHolder.Dummy1.route)
+        composable(ScreenHolder.GameScreen.route)
         {
-            DummyScreen1()
+            GameScreen()
         }
         composable(ScreenHolder.Dummy2.route)
         {
