@@ -1,5 +1,4 @@
-package com.example.sudokuplus.screens
-
+package com.example.sudokuplus.Screens
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -58,7 +57,7 @@ fun HomeScreen(navController: NavController) {
             .fillMaxHeight(0.8f)){
             Button(
                 onClick = {
-                          navController.navigate(route=ScreenHolder.Dummy1.route)
+                          navController.navigate(route=ScreenHolder.GameScreen.route)
                 },
                 modifier = Modifier
                     .padding(15.dp)
